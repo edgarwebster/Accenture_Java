@@ -1,0 +1,11 @@
+package runner;
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions (features = "/Users/edgarwebster/git/Accenture_Java/Accenture/SampleApp/src/main/resources/Test.feature", glue="pages")
+
+public class runner {
+
+}

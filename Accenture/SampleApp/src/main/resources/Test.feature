@@ -7,4 +7,4 @@ Scenario: Fill all forms and it shows the email message in the end.
   And user fill in Enter Product Data Form
   And user select Price Option and Check
   And user fill information and Send Quote
-  Then a sending e-mail success message is shown 
+  Then a sending e-mail success message is shown  

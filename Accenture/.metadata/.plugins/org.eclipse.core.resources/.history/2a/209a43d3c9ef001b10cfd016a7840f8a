@@ -1,0 +1,12 @@
+import cucumber.api.CucumberOptions;
+
+
+
+@CucumberOptions(
+        
+        features = {"/SampleApp/src/main/resources/Test.feature"}
+        )
+
+public class testRunner {
+
+}

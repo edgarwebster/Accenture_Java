@@ -1,0 +1,7 @@
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        format = {"pretty", "json:target/cucumber.json"},
+        features = {"/src/main/resources/Test"}
+)
+public class testRunner {}

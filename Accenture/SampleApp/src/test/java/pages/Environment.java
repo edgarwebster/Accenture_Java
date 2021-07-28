@@ -4,14 +4,14 @@ class Environment{
 	//Before
 	static String url="http://sampleapp.tricentis.com/101/app.php";
 	static String browser= "webdriver.chrome.driver";
-	static String webdriverLocation= "/Users/edgarwebster/Accenture/SampleApp/Drivers/chromedriver";
+	static String webdriverLocation= "/Users/edgarwebster/git/Accenture_Java/Accenture/SampleApp/Drivers/chromedriver";
 	
 	//Vehicle Data
     static String make="Mercedes Benz";
     static String model="Moped";
     static String cylindercapacity="10";
     static String engineperformance="15";
-    static String dateofmanufacture="10/01/2020";
+    static String dateofmanufacture="02/02/1980";
     static String numberofseats="2";
     static String RightHandDrive="yes";
     static String numberofseatsmotorcycle="2";
@@ -25,7 +25,7 @@ class Environment{
     //Insurant Data
     static String firstname ="Test";
     static String lastname="Test";
-    static String birthdate="10/10/2000";
+    static String birthdate="10/10/1980";
     static String gender="male";
     static String streetaddress="rua teste";
     static String country="Brazil";
@@ -36,7 +36,7 @@ class Environment{
     static String website="www.teste.com.br";
     
     //Product Data
-    static String startdate ="12/12/2021";
+    static String startdate ="10/10/2020";
     static String insurancesum="5.000.000,00";
     static String meritrating="Bonus 6";
     static String damageinsurance="Partial Coverage";
