@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="runner (1)" project="SampleApp" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.runner" time="21.625">
+    <testsuite name="Feature: Filling in Forms and Recive and Email." time="21.625">
+      <testsuite name="Scenario: Fill all forms and it shows the email message in the end." time="21.625">
+        <testcase name="Given Tricentis site is opened" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+        <testcase name="When user fill in Enter Vehicle Data Form" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+        <testcase name="And user fill in Enter Insurant Data Form" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+        <testcase name="And user fill in Enter Product Data Form" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.001"/>
+        <testcase name="And user select Price Option and Check" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+        <testcase name="And user fill information and Send Quote" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+        <testcase name="Then a sending e-mail success message is shown" classname="Scenario: Fill all forms and it shows the email message in the end." time="0.0"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
