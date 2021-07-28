@@ -1,0 +1,71 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Keywords {
+	String url;
+	WebDriver driver;
+	
+@Before
+public void setup() {
+	url = Environment.url;
+	System.setProperty(Environment.browser, Environment.webdriverLocation);
+	driver = new ChromeDriver();
+}
+@After
+public void teardown() {
+	driver.quit();
+}
+		@Given("^Tricentis site is opened$")
+		public void tricentis_site_is_opened() throws Throwable {
+		  driver.get(url);  
+		}
+
+		@When("^user fill in Enter Vehicle Data Form$")
+		public void user_fill_in_Enter_Vehicle_Data_Form() throws Throwable {
+	    VehicleData Vehicle = new VehicleData(driver);
+	    Vehicle.fillInVehicleDataForm();
+			
+		}
+
+		@When("^user fill in Enter Insurant Data Form$")
+		public void user_fill_in_Enter_Insurant_Data_Form() throws Throwable {
+		InsurantData Insurant = new InsurantData(driver);
+		Insurant.fillInInsurantDataForm();
+	
+		}
+
+		@When("^user fill in Enter Product Data Form$")
+		public void user_fill_in_Enter_Product_Data_Form() throws Throwable {
+		ProductData Product = new ProductData(driver);
+		Product.fillInProductDataForm();
+
+		}
+
+		@When("^user select Price Option and Check$")
+		public void user_select_Price_Option_and_Check() throws Throwable {
+		SelectPriceOption Price = new SelectPriceOption(driver);
+		Price.fillInPriceOptionDataForm();
+		}
+
+		@When("^user fill information and Send Quote$")
+		public void user_fill_information_and_Send_Quote() throws Throwable {
+
+		}
+
+		@Then("^a sending e-mail success message is shown$")
+		public void a_sending_e_mail_success_message_is_shown() throws Throwable {
+
+		}
+}

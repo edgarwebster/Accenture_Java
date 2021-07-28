@@ -1,0 +1,20 @@
+package accenture;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseTest {
+	WebDriver driver;
+	public BaseTest(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void setup() {
+		System.setProperty(Environment.browser, Environment.webdriverLocation);
+		driver = new ChromeDriver();
+	}
+	public void teardown() {
+		driver.quit();
+	}
+
+}

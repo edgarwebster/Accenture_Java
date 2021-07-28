@@ -1,0 +1,81 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class InsurantData {
+	WebDriver driver;
+	By firstname = By.id("firstname");
+	By lastname = By.id("lastname");
+	By birthdate = By.id("birthdate");
+	By male = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[1]/span");
+	By female = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[2]/span");
+	By streetaddress = By.id("streetaddress");
+	By country = By.id("country");
+	By zipcode = By.id("zipcode");
+	By city = By.id("city");
+	By occupation = By.id("occupation"); 
+	By speeding = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[1]/span");
+	By bungeeJumping = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[2]/span");
+	By cliffDiving = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[3]/span");
+	By skydiving = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[4]/span");
+	By other = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[5]/span");
+	By website = By.id("website");
+	By nextenterproductdata = By.id("nextenterproductdata");
+	
+	public InsurantData(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	
+	public void fillInInsurantDataForm(){
+		
+		driver.findElement(firstname).sendKeys(Keys.chord(Environment.firstname));
+		driver.findElement(lastname).sendKeys(Keys.chord(Environment.lastname));
+		driver.findElement(birthdate).sendKeys(Keys.chord(Environment.birthdate));
+		if (Environment.RightHandDrive=="male") {
+			driver.findElement(male).click();	
+		}
+		else if(Environment.RightHandDrive=="female") {
+			driver.findElement(female).click();
+			}
+		driver.findElement(streetaddress).sendKeys(Keys.chord(Environment.streetaddress));
+		driver.findElement(country).sendKeys(Keys.chord(Environment.country));
+		driver.findElement(zipcode).sendKeys(Keys.chord(Environment.zipcode));
+		driver.findElement(city).sendKeys(Keys.chord(Environment.city));
+		driver.findElement(occupation).sendKeys(Keys.chord(Environment.occupation));
+		switch (Environment.hobbie) {
+			case "speeding":
+				driver.findElement(speeding).click();
+			case "bungeeJumping":
+				driver.findElement(bungeeJumping).click();
+			case "cliffDiving":
+				driver.findElement(cliffDiving).click();
+			case "skydiving":
+				driver.findElement(skydiving).click();
+			case "other":
+				driver.findElement(other).click();		
+		}
+		new Select(driver.findElement(make)).selectByVisibleText(Environment.make);
+		new Select(driver.findElement(model)).selectByVisibleText(Environment.model);
+		driver.findElement(cylindercapacity).sendKeys(Keys.chord(Environment.cylindercapacity));
+		driver.findElement(engineperformance).sendKeys(Keys.chord(Environment.engineperformance));
+		driver.findElement(dateofmanufacture).sendKeys(Keys.chord(Environment.dateofmanufacture));
+		new Select(driver.findElement(numberofseats)).selectByVisibleText(Environment.numberofseats);
+		if (Environment.RightHandDrive=="yes") {
+			driver.findElement(yes).click();	
+		}
+		else if(Environment.RightHandDrive=="no") {
+			driver.findElement(no).click();
+			}
+		new Select(driver.findElement(numberofseatsmotorcycle)).selectByVisibleText(Environment.numberofseatsmotorcycle);
+		driver.findElement(payload).sendKeys(Keys.chord(Environment.payload));
+		driver.findElement(totalweight).sendKeys(Keys.chord(Environment.totalweight));
+		driver.findElement(listprice).sendKeys(Keys.chord(Environment.listprice));
+		driver.findElement(licenseplatenumber).sendKeys(Keys.chord(Environment.licenseplatenumber));
+		driver.findElement(annualmileage).sendKeys(Keys.chord(Environment.annualmileage));
+		driver.findElement(nextenterinsurantdata).click();
+		}
+}

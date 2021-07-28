@@ -1,0 +1,22 @@
+package accenture;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SetupAndTeardown {
+	String url;
+	WebDriver driver;
+	public SetupAndTeardown(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void Setup() {
+		url = Environment.url;
+		System.setProperty(Environment.browser, Environment.webdriverLocation);
+		driver = new ChromeDriver();
+	}
+	public void Teardown() {
+		driver.quit();
+	}
+
+}

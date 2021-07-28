@@ -1,0 +1,30 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class SendQuote {
+	
+	WebDriver driver;
+	By email = By.id("email");
+	By phone = By.id("phone");
+	By username = By.id("username");
+	By password = By.id("password");
+	By confirmpassword = By.id("confirmpassword");
+	By Comments = By.id("Comments");
+	By sendemail = By.id("sendemail");
+
+	
+	public SendQuote(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void fillInSendQuoteDataForm()  {
+
+
+
+Sending e-mail success
+    wait until page contains  Sending e-mail success!  60
+	}
+
+}

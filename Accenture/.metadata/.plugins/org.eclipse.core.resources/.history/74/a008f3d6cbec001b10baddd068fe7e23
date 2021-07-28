@@ -1,0 +1,10 @@
+package accenture;
+
+class EnvironmentVehicleData{
+    static String make="Mercedes Benz";
+    static String model="Moped";
+    static int cylindercapacity=10;
+    static int engineperformance=15;
+    static int dateofmanufacture=10/01/2020;
+    static String RightHandDrive="yes";
+}

@@ -1,0 +1,57 @@
+package accenture;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class FillingForms {
+	String url;
+	WebDriver driver;
+	
+@Before
+public void setup() {
+	url = "http://sampleapp.tricentis.com/101/app.php";
+	System.setProperty("webdriver.chrome.driver", "")
+	driver = new ChromeDriver()
+@After
+public void teardown() {
+	
+}
+		@Given("^Tricentis site is opened$")
+		public void tricentis_site_is_opened() throws Throwable {
+		    
+		}
+
+		@When("^user fill in Enter Vehicle Data Form$")
+		public void user_fill_in_Enter_Vehicle_Data_Form() throws Throwable {
+		  
+		}
+
+		@When("^user fill in Enter Insurant Data Form$")
+		public void user_fill_in_Enter_Insurant_Data_Form() throws Throwable {
+	
+		}
+
+		@When("^user fill in Enter Product Data Form$")
+		public void user_fill_in_Enter_Product_Data_Form() throws Throwable {
+
+		}
+
+		@When("^user select Price Option and Check$")
+		public void user_select_Price_Option_and_Check() throws Throwable {
+		}
+
+		@When("^user fill information and Send Quote$")
+		public void user_fill_information_and_Send_Quote() throws Throwable {
+
+		}
+
+		@Then("^a sending e-mail success message is shown$")
+		public void a_sending_e_mail_success_message_is_shown() throws Throwable {
+
+		}
+}

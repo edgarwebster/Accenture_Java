@@ -1,0 +1,30 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class InsurantData {
+	WebDriver driver;
+	By firstname = By.id("firstname");
+	By lastname = By.id("lastname");
+	By birthdate = By.id("birthdate");
+	By male = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[1]/span");
+	By female = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[2]/span");
+	By streetaddress = By.id("streetaddress");
+	By country = By.id("country");
+	By zipcode = By.id("zipcode");
+	By city = By.id("city");
+	By  occupation = By.id("occupation"); 
+	By speeding = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[1]/span");
+	By bungeeJumping = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[2]/span");
+	By cliffDiving = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[3]/span");
+	By skydiving = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[4]/span");
+	By other = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[5]/span");
+	By website = By.id("website");
+	By nextenterproductdata = By.id("nextenterproductdata");
+	
+	public InsurantData(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+}

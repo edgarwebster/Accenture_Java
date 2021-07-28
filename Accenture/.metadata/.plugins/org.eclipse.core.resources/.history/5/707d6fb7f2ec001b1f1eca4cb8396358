@@ -1,0 +1,15 @@
+package accenture;
+
+import org.openqa.selenium.By;
+
+public class InsurantData {
+	By firstname = By.id("firstname");
+	By lastname = By.id("lastname");
+	By birthdate = By.id("birthdate");
+	By male = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[1]/span");
+	By female = By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[4]/p/label[2]/span");
+	By streetaddress = By.id("streetaddress");
+	By country = By.id("country");
+	By zipcode = By.id("zipcode");
+	
+}

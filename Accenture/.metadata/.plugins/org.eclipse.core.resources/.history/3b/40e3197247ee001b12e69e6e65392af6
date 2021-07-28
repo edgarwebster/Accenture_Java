@@ -1,0 +1,22 @@
+package accenture;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
+
+public class BaseTest {
+	WebDriver driver;
+@Before
+public void setup() {
+	System.setProperty(Environment.browser, Environment.webdriverLocation);
+	driver = new ChromeDriver();
+	driver.get(Environment.url);
+	return;
+}
+@After
+public void teardown() {
+	driver.quit();
+ 	}
+}

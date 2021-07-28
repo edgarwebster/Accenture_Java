@@ -1,0 +1,6 @@
+package accenture;
+
+class EnvironmentVehicleData{
+    static String make="Mercedes Benz";
+    static String model="Moped";
+}

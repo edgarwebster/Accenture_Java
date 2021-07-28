@@ -1,0 +1,45 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class VehicleData {
+	WebDriver driver;
+	By make = By.id("make");
+	By model = By.id("model");
+	By cylindercapacity = By.id("cylindercapacity");
+	By engineperformance = By.id("engineperformance");
+	By dateofmanufacture =  By.id("dateofmanufacture");
+	By numberofseats = By.id("numberofseats");
+	By yes = By.xpath("//*[@id=\"insurance-form\"]/div/section[1]/div[7]/p/label[1]/span");
+	By no = By.xpath("//*[@id=\"insurance-form\"]/div/section[1]/div[7]/p/label[2]/span");
+	By numberofseatsmotorcycle = By.id("numberofseatsmotorcycle");
+	public VehicleData(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void fillInVehicleDataForm(){
+	new Select(driver.findElement(make)).selectByVisibleText(EnvironmentVehicleData.make);
+	new Select(driver.findElement(model)).selectByVisibleText(EnvironmentVehicleData.model);
+	driver.findElement(cylindercapacity).sendKeys(Keys.chord(EnvironmentVehicleData.cylindercapacity));
+	driver.findElement(engineperformance).sendKeys(Keys.chord(EnvironmentVehicleData.engineperformance));
+	driver.findElement(dateofmanufacture).sendKeys(Keys.chord(EnvironmentVehicleData.dateofmanufacture));
+	new Select(driver.findElement(numberofseats)).selectByVisibleText(EnvironmentVehicleData.numberofseats);
+	if (EnvironmentVehicleData.RightHandDrive=="yes") {
+		driver.findElement(yes).click();	
+	}
+	else if(EnvironmentVehicleData.RightHandDrive=="no") {
+		driver.findElement(no).click();
+		}
+	new Select(driver.findElement(numberofseatsmotorcycle)).selectByVisibleText(EnvironmentVehicleData.numberofseatsmotorcycle);
+	driver.findElement(By.id("payload")).sendKeys(Keys.chord(EnvironmentVehicleData.payload));
+	driver.findElement(By.id("totalweight")).sendKeys(Keys.chord(EnvironmentVehicleData.totalweight));
+	driver.findElement(By.id("listprice")).sendKeys(Keys.chord(EnvironmentVehicleData.listprice));
+	driver.findElement(By.id("licenseplatenumber")).sendKeys(Keys.chord(EnvironmentVehicleData.licenseplatenumber));
+	driver.findElement(By.id("annualmileage")).sendKeys(Keys.chord(EnvironmentVehicleData.annualmileage));
+	driver.findElement(By.id("nextenterinsurantdata")).click();
+	}
+
+}

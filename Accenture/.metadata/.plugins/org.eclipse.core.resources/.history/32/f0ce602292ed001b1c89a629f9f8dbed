@@ -1,0 +1,40 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
+public class ProductData {
+	WebDriver driver;
+	By startdate = By.id("startdate");
+	By insurancesum = By.id("insurancesum");
+	By meritrating = By.id("meritrating");
+	By damageinsurance = By.id("damageinsurance");
+	By EuroProtection = By.xpath("//*[@id=\"insurance-form\"]/div/section[3]/div[5]/p/label[1]/span");
+	By LegalDefenseInsurance = By.xpath("//*[@id=\"insurance-form\"]/div/section[3]/div[5]/p/label[2]/span");
+	By courtesycar = By.id("courtesycar");
+	By nextselectpriceoption = By.id("nextselectpriceoption");
+	
+	public ProductData(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void fillInProductDataForm() throws InterruptedException {
+	driver.findElement(startdate).sendKeys(Keys.chord(Environment.startdate));
+	driver.findElement(insurancesum).sendKeys(Keys.chord(Environment.insurancesum));
+	driver.findElement(meritrating).sendKeys(Keys.chord(Environment.meritrating));
+	driver.findElement(damageinsurance).sendKeys(Keys.chord(Environment.damageinsurance));
+	if (Environment.OptionalProducts=="EuroProtection") {
+		driver.findElement(EuroProtection).click();	
+	}
+	else if(Environment.OptionalProducts=="LegalDefenseInsurance") {
+		driver.findElement(LegalDefenseInsurance).click();
+		}
+	driver.findElement(courtesycar).sendKeys(Keys.chord(Environment.courtesycar));
+	driver.findElement(nextselectpriceoption).click();
+	Thread.sleep(120000);
+	}
+
+
+
+}

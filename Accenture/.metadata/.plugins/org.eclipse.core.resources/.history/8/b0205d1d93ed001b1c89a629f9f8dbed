@@ -1,0 +1,38 @@
+package accenture;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class SelectPriceOption {
+	WebDriver driver;
+	By silver = By.xpath("//*[@id=\"priceTable\"]/tfoot/tr/th[2]/label[1]/span");
+	By gold = By.xpath("//*[@id=\"priceTable\"]/tfoot/tr/th[2]/label[2]/span");
+	By platinum = By.xpath("//*[@id=\"priceTable\"]/tfoot/tr/th[2]/label[3]/span");
+	By ultimate = By.xpath("//*[@id=\"priceTable\"]/tfoot/tr/th[2]/label[4]/span");
+	By nextsendquote = By.id("nextsendquote");
+	
+	public SelectPriceOption(WebDriver driver)
+	{
+		this.driver=driver;
+		}
+	public void fillInPriceOptionDataForm() throws InterruptedException {
+		switch (Environment.priceOption) {
+		case "silver":
+			driver.findElement(silver).click();
+			break;
+		case "gold":
+			driver.findElement(gold).click();
+			break;
+		case "platinum":
+			driver.findElement(platinum).click();
+			break;
+		case "ultimate":
+			driver.findElement(ultimate).click();
+			break;
+			}
+		Thread.sleep(30000);
+		driver.findElement(nextsendquote).click();		
+	}
+	
+
+}

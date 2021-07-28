@@ -1,0 +1,5 @@
+package accenture;
+
+class Environment{
+    static String make="Mercedes Benz";
+}
